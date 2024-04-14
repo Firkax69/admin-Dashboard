@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard for Odin</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="container">
         <div id="header">
             <div class="search-line">
-                <input type="text">
+                <img src="./images/restOfPhoto/magnify.svg" alt="search icon">
+                <input type="text"> 
             </div>
-            <div class="avatar"><p>Ihor Kovalevskyi</p></div>
+            <div class="avatar">
+                <img src="./images/restOfPhoto/bell-ring-outline.svg" alt="bell icon">
+                <img src="./images/restOfPhoto/corgi.png" alt="user profile photo">
+                <p>Ihor Kovalevskyi</p>
+            </div>
             <div class="header-bottom">
                 <div class="profile-info">
-                    <a href=""><img src="" alt=""></a>
-                    <p>Hi there,</p>
-                    <h2>Ihor Kovalevskyi (@firkax69)</h2>
+                    <img src="./images/restOfPhoto/corgi.png" alt="profile image">
+                    <p style="align-self: end;">Hi there,</p>
+                    <h2 style="align-self: start;">Ihor Kovalevskyi (@firkax69)</h2>
                 </div>
                 <div class="buttons">
                     <button>New</button>
@@ -27,19 +35,53 @@
             </div>
         </div>
         <div id="dashboard">
-            <h3>Dashboard</h3>
+            <div>
+                <img class="img-icon" src="./images/dashboard-icons/table-headers-eye.svg" alt="Dashboard-icon">
+                <h3>Dashboard</h3>
+            </div>
             <div class="navigation">
-                <p>Home</p>
-                <p>Profile</p>
-                <p>Messages</p>
-                <p>History</p>
-                <p>Tasks</p>
-                <p>Communities</p>
+                <ul>
+                    <li>
+                        <img src="./images/dashboard-icons/home.svg" alt="icon">
+                        <p>Home</p>
+                    </li>
+                    <li>
+                        <img src="./images/dashboard-icons/card-account-details-outline.svg" alt="icon">
+                        <p>Profile</p>
+                    </li>
+                    <li>
+                        <img src="./images/dashboard-icons/message-reply.svg" alt="icon">
+                        <p>Messages</p>
+                    </li>
+                    <li>
+                        <img src="./images/dashboard-icons/history.svg" alt="icon">
+                        <p>History</p>
+                    </li>
+                    <li>
+                        <img src="./images/dashboard-icons/file-document-multiple.svg" alt="icon">
+                        <p>Tasks</p>
+                    </li>
+                    <li>
+                        <img src="./images/dashboard-icons/account-group.svg" alt="icon">
+                        <p>Communities</p>
+                    </li>
+                </ul>
             </div>
             <div class="branding">
-                <p>Settings</p>
-                <p>Support</p>
-                <p>Privacy</p>
+                <ul>
+                    <li>
+                        <img src="./images/dashboard-icons/cog-outline.svg" alt="icon">
+                        <p>Settings</p>
+                    </li>
+                    <li>
+                        <img src="./images/dashboard-icons/help-box.svg" alt="icon">
+                        <p>Support</p>
+                    </li>
+                    <li>
+                        <img src="./images/dashboard-icons/shield-check.svg" alt="icon">
+                        <p>Privacy</p>
+                    </li>
+                </ul>
             </div>
         </div>
         <div id="main">
@@ -77,11 +119,27 @@
             </div>
             <div class="trending">
                 <h3>Trending</h3>
-                <div>
-                    <div>Lorem, ipsum dolor sit amet consectetur</div>
-                    <div>Lorem, ipsum dolor sit amet consectetur</div>
-                    <div>Lorem, ipsum dolor sit amet consectetur</div>
-                    <div>Lorem, ipsum dolor sit amet consectetur</div>
+                <div class="trending-container">
+                    <div>
+                        <img src="./images/restOfPhoto/cat.png" alt="Cat icon">
+                        <p>@Arguing-cat</p>
+                        <p>World best meme cat</p>
+                    </div>
+                    <div>
+                        <img src="./images/restOfPhoto/dog.png" alt="Dog icon">
+                        <p>@Doggy63</p>
+                        <p>Super active dog</p>
+                    </div>
+                    <div>
+                        <img src="./images/restOfPhoto/bear.png" alt="Bear icon">
+                        <p>@Gym-bear</p>
+                        <p>Bodybuilder Bear</p>
+                    </div>
+                    <div>
+                        <img src="./images/restOfPhoto/monkey.png" alt="Monkey icon">
+                        <p>@MonkeyIT</p>
+                        <p>CSS profi</p>
+                    </div>
                 </div>
             </div>
             </div>
