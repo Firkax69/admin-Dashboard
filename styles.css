@@ -2,6 +2,7 @@
     box-sizing: border-box;
     --white-text: white;
     --cards-border: 10px;
+    --text-clr-transperant: rgba(0,0,0,0.6);
 }
 
 * {
@@ -19,6 +20,12 @@
 
 li {
     list-style-type: none;
+}
+
+.card,
+.announcments-container,
+.trending-container {
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* DASHBOARD STYLING */
@@ -98,7 +105,7 @@ input {
     width: 47vw;
     height: 2.5rem;
     margin-left: 1vw;
-    background-color: rgb(213, 201, 201);
+    background-color: rgb(228, 228, 228);
     border: none;
     border-radius: 20px;
 }
@@ -190,41 +197,90 @@ button:active {
 #main {
     display: grid;
     grid-template: 1fr/3fr 1fr;
-    background-color: rgb(225, 213, 213);
+    background-color: rgb(228, 228, 228);
     padding: 30px 25px 40px 20px;
-    gap: 20px;
+    gap: 30px;
 }
 
 .cards-container {
     padding-top: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 25px;
     justify-content: space-between;
 }
 
 .card {
     background-color: var(--white-text);
-    /* height: 20vh; */
     border-radius: var(--cards-border);
-    padding: 30px 15px 20px 20px;
+    /* padding: 30px 15px 20px 20px; */
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 3px 1fr;
+    grid-template-areas: 
+        "lefthand top-righthand"
+        "lefthand bottom-righthand";
+    row-gap: 5vh;
+    column-gap: 1vw;
+    padding: 30px 25px 25px 25px;
 }
 
 .your-projects {
     grid-row: 1/2;
 }
 
-.announ-and-trending {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+.text p {
+    color: var(--text-clr-transperant);
+}
+
+.card div img {
+    height: 1.6rem;
+}
+
+.card .images {
+    /* margin-top: 5vh; */
+    display: flex;
+    gap: 1.6rem;
+    grid-area: bottom-righthand;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.card .text {
+    grid-area: top-righthand;
+    padding-bottom: 4vh;
+}
+
+.color {
+    grid-area: lefthand;
+}
+
+.card .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.color {
+    background-color: rgb(59, 139, 209);
+}
+
+.text h4 {
+    padding-bottom: 0.4rem;
 }
 
 
 
 
 
-
 /* Announcments styling */
+
+.announ-and-trending {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
 
 .announcments > div {
     display: flex;
@@ -235,8 +291,24 @@ button:active {
     padding: 30px;
 }
 
+.announcments-container {
+    display: flex;
+    gap: 2rem;
+}
 
+.announcments-container div p {
+    color: var(--text-clr-transperant);
+    font-size: small;
+}
 
+.announcments-container div h4 {
+    padding-bottom: 0.2vw;
+}
+
+.announcments-container div {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 
 
@@ -249,13 +321,14 @@ button:active {
 .trending-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    color: var(--text-clr-transperant);
 }
 
 .trending > div{
     background-color: var(--white-text);
     border-radius: var(--cards-border);
-    padding: 20px 20px 25px 20px;
+    padding: 33px 20px 45px 33px;
     margin-top: 10px;
 }
 
@@ -269,5 +342,17 @@ button:active {
 
 .trending-container > div {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: auto 2.5fr;
+    column-gap: 1.5rem;
+    justify-content: end;
+    row-gap: 0.1rem;
+}
+
+.trending-container div p {
+    font-size: 0.9rem;
+}
+
+.nickname {
+    font-weight: 400;
+    color: black;
 }
